@@ -48,7 +48,7 @@ public class UserController {
 		userService.getUserById(userId, userResponseFields);
 		return userResponse;
 	}
-	
+	@ResponseBody
 	@PostMapping(value = "/add", produces = "application/json", consumes = "application/json"  )
 	UserResponse addUser(@RequestBody UserRequest userRequest) {
 		
